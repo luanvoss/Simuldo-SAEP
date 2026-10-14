@@ -43,3 +43,28 @@ values
 ("2026-09-07", 'Dor de Cabeça fortes', 2),
 ("2026-10-04", 'Dor de barriga', 1),
 ("2026-07-09", 'Dor de Cabeça fortes', 3);
+
+\\coreções\\
+
+USE saep_pediatria;
+
+ALTER TABLE filho
+MODIFY Id_Responsavel INT NOT NULL;
+
+ALTER TABLE agendamento
+MODIFY Id_Filho INT NOT NULL;
+
+//
+UPDATE filho
+SET Data_Nascimento = '1999-08-11'
+WHERE Nome = 'Paulo Voss';
+//
+CREATE TABLE usuarios (
+    Id_Usuario INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) NOT NULL UNIQUE,
+    Senha VARCHAR(255) NOT NULL
+);
+// 
+
+

@@ -1,7 +1,7 @@
 
 const db = require("../config/database");
 
-// GET - Buscar todos os usuários
+
 const buscarTodos = async () => {
     const [usuarios] = await db.query(`
         SELECT Id_Usuario, Nome, Email
@@ -11,7 +11,7 @@ const buscarTodos = async () => {
     return usuarios;
 };
 
-// GET - Buscar usuário por ID
+
 const buscarPorId = async (id) => {
     const [usuarios] = await db.query(`
         SELECT Id_Usuario, Nome, Email
@@ -22,7 +22,7 @@ const buscarPorId = async (id) => {
     return usuarios[0];
 };
 
-// POST - Criar usuário
+
 const criar = async (Nome, Email, Senha) => {
     const [resultado] = await db.query(`
         INSERT INTO usuarios (Nome, Email, Senha)
@@ -36,7 +36,7 @@ const criar = async (Nome, Email, Senha) => {
     };
 };
 
-// PUT - Atualizar usuário
+
 const atualizar = async (id, Nome, Email, Senha) => {
     const [resultado] = await db.query(`
         UPDATE usuarios
@@ -47,7 +47,7 @@ const atualizar = async (id, Nome, Email, Senha) => {
     return resultado.affectedRows;
 };
 
-// DELETE - Excluir usuário
+
 const excluir = async (id) => {
     const [resultado] = await db.query(`
         DELETE FROM usuarios

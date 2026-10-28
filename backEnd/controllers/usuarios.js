@@ -2,7 +2,7 @@
 const usuariosModel = require("../models/usuarios");
 const bcrypt = require("bcrypt");
 
-// GET - Buscar todos os usuários
+
 const buscarTodos = async (req, res) => {
     try {
         const usuarios = await usuariosModel.buscarTodos();
@@ -16,7 +16,7 @@ const buscarTodos = async (req, res) => {
     }
 };
 
-// GET - Buscar usuário por ID
+
 const buscarPorId = async (req, res) => {
     try {
         const { id } = req.params;
@@ -38,7 +38,7 @@ const buscarPorId = async (req, res) => {
     }
 };
 
-// POST - Criar usuário
+
 const criar = async (req, res) => {
     try {
         const { Nome, Email, Senha } = req.body;
@@ -87,7 +87,7 @@ const criar = async (req, res) => {
     }
 };
 
-// PUT - Atualizar usuário
+
 const atualizar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -146,7 +146,7 @@ const atualizar = async (req, res) => {
     }
 };
 
-// DELETE - Excluir usuário
+
 const excluir = async (req, res) => {
     try {
         const { id } = req.params;

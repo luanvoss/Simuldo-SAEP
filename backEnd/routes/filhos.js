@@ -4,20 +4,11 @@ const router = express.Router();
 
 const filhosController = require("../controllers/filhos");
 
-// GET - Listar todos os filhos
-router.get("/", filhosController.buscarTodos);
-
-// GET - Buscar filho por ID
-router.get("/:id", filhosController.buscarPorId);
-
-// POST - Cadastrar filho
-router.post("/", filhosController.criar);
-
-// PUT - Atualizar filho
-router.put("/:id", filhosController.atualizar);
-
-// DELETE - Excluir filho
-router.delete("/:id", filhosController.excluir);
+router.get("/filhos", filhosController.buscarTodos);
+router.get("/filhos/:id", filhosController.buscarPorId);
+router.post("/filhos", filhosController.criar);
+router.put("/filhos/:id", filhosController.atualizar);
+router.delete("/filhos/:id", filhosController.excluir);
 
 module.exports = router;
 

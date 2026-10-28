@@ -1,7 +1,7 @@
 
-const agendamentosModel = require("../models/agendamentos");
+const agendamentosModel = require("../models/agendamento");
 
-// GET - Buscar todos os agendamentos
+
 const buscarTodos = async (req, res) => {
     try {
         const agendamentos = await agendamentosModel.buscarTodos();
@@ -15,7 +15,7 @@ const buscarTodos = async (req, res) => {
     }
 };
 
-// GET - Buscar agendamento por ID
+
 const buscarPorId = async (req, res) => {
     try {
         const { id } = req.params;
@@ -37,7 +37,7 @@ const buscarPorId = async (req, res) => {
     }
 };
 
-// POST - Criar agendamento
+
 const criar = async (req, res) => {
     try {
         const { Data_Consulta, Motivo, Id_Filho } = req.body;
@@ -70,7 +70,7 @@ const criar = async (req, res) => {
     }
 };
 
-// PUT - Atualizar agendamento
+
 const atualizar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -113,7 +113,7 @@ const atualizar = async (req, res) => {
     }
 };
 
-// DELETE - Excluir agendamento
+
 const excluir = async (req, res) => {
     try {
         const { id } = req.params;

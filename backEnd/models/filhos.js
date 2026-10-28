@@ -1,7 +1,7 @@
 
 const db = require("../config/database");
 
-// GET - Buscar todos os filhos
+
 const buscarTodos = async () => {
     const [filhos] = await db.query(`
         SELECT
@@ -15,7 +15,7 @@ const buscarTodos = async () => {
     return filhos;
 };
 
-// GET - Buscar filho por ID
+
 const buscarPorId = async (id) => {
     const [filhos] = await db.query(`
         SELECT
@@ -30,7 +30,7 @@ const buscarPorId = async (id) => {
     return filhos[0];
 };
 
-// POST - Criar filho
+
 const criar = async (Nome, Data_Nascimento, Id_Responsavel) => {
     const [resultado] = await db.query(`
         INSERT INTO filho (Nome, Data_Nascimento, Id_Responsavel)
@@ -45,7 +45,7 @@ const criar = async (Nome, Data_Nascimento, Id_Responsavel) => {
     };
 };
 
-// PUT - Atualizar filho
+
 const atualizar = async (id, Nome, Data_Nascimento, Id_Responsavel) => {
     const [resultado] = await db.query(`
         UPDATE filho
@@ -56,7 +56,7 @@ const atualizar = async (id, Nome, Data_Nascimento, Id_Responsavel) => {
     return resultado.affectedRows;
 };
 
-// DELETE - Excluir filho
+
 const excluir = async (id) => {
     const [resultado] = await db.query(`
         DELETE FROM filho

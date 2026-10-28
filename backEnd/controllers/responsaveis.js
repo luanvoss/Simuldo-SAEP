@@ -1,7 +1,7 @@
 
 const responsaveisModel = require("../models/responsaveis");
 
-// GET - Buscar todos os responsáveis
+
 const buscarTodos = async (req, res) => {
     try {
         const responsaveis = await responsaveisModel.buscarTodos();
@@ -15,7 +15,6 @@ const buscarTodos = async (req, res) => {
     }
 };
 
-// GET - Buscar responsável por ID
 const buscarPorId = async (req, res) => {
     try {
         const { id } = req.params;
@@ -37,7 +36,7 @@ const buscarPorId = async (req, res) => {
     }
 };
 
-// POST - Criar responsável
+
 const criar = async (req, res) => {
     try {
         const { Nome, CPF, Telefone } = req.body;
@@ -70,7 +69,7 @@ const criar = async (req, res) => {
     }
 };
 
-// PUT - Atualizar responsável
+
 const atualizar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -113,7 +112,7 @@ const atualizar = async (req, res) => {
     }
 };
 
-// DELETE - Excluir responsável
+
 const excluir = async (req, res) => {
     try {
         const { id } = req.params;

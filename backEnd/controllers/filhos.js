@@ -1,7 +1,7 @@
 
 const filhosModel = require("../models/filhos");
 
-// GET - Buscar todos os filhos
+
 const buscarTodos = async (req, res) => {
     try {
         const filhos = await filhosModel.buscarTodos();
@@ -15,7 +15,7 @@ const buscarTodos = async (req, res) => {
     }
 };
 
-// GET - Buscar filho por ID
+
 const buscarPorId = async (req, res) => {
     try {
         const { id } = req.params;
@@ -37,7 +37,7 @@ const buscarPorId = async (req, res) => {
     }
 };
 
-// POST - Criar filho
+
 const criar = async (req, res) => {
     try {
         const { Nome, Data_Nascimento, Id_Responsavel } = req.body;
@@ -70,7 +70,7 @@ const criar = async (req, res) => {
     }
 };
 
-// PUT - Atualizar filho
+
 const atualizar = async (req, res) => {
     try {
         const { id } = req.params;
@@ -113,7 +113,7 @@ const atualizar = async (req, res) => {
     }
 };
 
-// DELETE - Excluir filho
+
 const excluir = async (req, res) => {
     try {
         const { id } = req.params;
